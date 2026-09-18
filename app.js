@@ -2,12 +2,12 @@
     es: {
       title: 'Roberto Antonio López García — Desarrollador',
       description: 'Portafolio de Roberto Antonio López García, desarrollador full-stack.',
-      role: 'Desarrollador full-stack',
-      intro: '¡Hey! Soy Roberto. Desde muy chico me encantan la tecnología, la música y el fútbol. Como no pude ser cantante ni futbolista, aquí estoy: creando soluciones con código.',
+      role: 'Desarrollador de software',
+      intro: 'Desarrollo aplicaciones web con JavaScript, Node.js y PostgreSQL. Me interesa construir herramientas útiles y entender bien cómo funcionan.',
       viewProjects: 'Ver proyectos',
       aboutTitle: 'Sobre mí',
-      aboutBody: 'Me gusta entender cómo funcionan las cosas y encontrar formas de hacerlas más simples. Disfruto aprender, probar ideas nuevas y enfrentar problemas que me obliguen a pensar de manera diferente.',
-      aboutNote: 'Todavía tengo mucho por aprender, pero esa es precisamente una de las cosas que más me entusiasma de este camino: siempre hay algo nuevo que descubrir y una mejor manera de hacer las cosas.',
+      aboutBody: 'Soy desarrollador de software y me interesan especialmente el backend y las bases de datos. Trabajo con JavaScript, Express y SQL para crear aplicaciones completas, desde la API hasta la interfaz.',
+      aboutNote: 'Busco una oportunidad de pasantía para aprender de un equipo y aportar lo que he practicado en mis proyectos: validación de datos, pruebas y despliegue.',
       projectsTitle: 'Proyectos',
       projectsNote: 'Cada uno resuelto de punta a punta: interfaz, lógica y datos.',
       noDemo: 'sin demo pública',
@@ -27,7 +27,7 @@
       testing: 'Pruebas de integración',
       apiDesign: 'Diseño de APIs',
       contactTitle: 'Hablemos de tu próximo proyecto',
-      contactBody: 'Si tienes un problema que resolver con código, o simplemente quieres ver más de mi trabajo, aquí me encuentras.',
+      contactBody: 'Estoy abierto a oportunidades de pasantía y colaboraciones en desarrollo de software.',
       emailMe: 'Escríbeme',
       home: 'Inicio',
       contactLabel: 'Contacto',
@@ -35,16 +35,22 @@
       themeAction: 'Modo oscuro',
       themeToDark: 'Cambiar a modo oscuro',
       themeToLight: 'Cambiar a modo claro',
+      location: 'República Dominicana',
+      featured: 'Proyecto principal',
+      postulaDescription: 'Gestor de postulaciones laborales con seguimiento por etapas, filtros y próxima entrevista. API con Express, datos en PostgreSQL con Neon e interfaz con Flexbox. Desplegado en Cloudflare Workers.',
+      tools: 'Herramientas',
+      skip: 'Saltar al contenido',
+      backTop: 'Volver al inicio',
     },
     en: {
       title: 'Roberto Antonio López García — Developer',
       description: 'Portfolio of Roberto Antonio López García, a full-stack developer.',
-      role: 'Full-stack developer',
-      intro: "Hey! I'm Roberto. I've loved technology, music and football since I was a kid. I couldn't become a singer or a footballer, so here I am: building solutions with code.",
+      role: 'Software developer',
+      intro: 'I build web applications with JavaScript, Node.js and PostgreSQL. I enjoy making useful tools and understanding how they work.',
       viewProjects: 'View projects',
       aboutTitle: 'About me',
-      aboutBody: 'I enjoy understanding how things work and finding ways to make them simpler. I like learning, trying new ideas and facing problems that challenge me to think differently.',
-      aboutNote: 'I still have a lot to learn, but that is exactly what excites me about this path: there is always something new to discover and a better way to do things.',
+      aboutBody: 'I am a software developer with a particular interest in backend development and databases. I use JavaScript, Express and SQL to build complete applications, from the API to the interface.',
+      aboutNote: 'I am looking for an internship where I can learn from a team and contribute the skills I practice in my projects: data validation, testing and deployment.',
       projectsTitle: 'Projects',
       projectsNote: 'Each one built end to end: interface, logic and data.',
       noDemo: 'no public demo',
@@ -64,7 +70,7 @@
       testing: 'Integration testing',
       apiDesign: 'API design',
       contactTitle: 'Let’s talk about your next project',
-      contactBody: 'If you have a problem that code can solve, or simply want to see more of my work, you can find me here.',
+      contactBody: 'I am open to software development internships and collaborations.',
       emailMe: 'Email me',
       home: 'Home',
       contactLabel: 'Contact',
@@ -72,86 +78,70 @@
       themeAction: 'Dark mode',
       themeToDark: 'Switch to dark mode',
       themeToLight: 'Switch to light mode',
+      location: 'Dominican Republic',
+      featured: 'Featured project',
+      postulaDescription: 'Job application tracker with stages, filters and upcoming interviews. Express API, PostgreSQL data hosted on Neon and a Flexbox interface. Deployed on Cloudflare Workers.',
+      tools: 'Tools',
+      skip: 'Skip to content',
+      backTop: 'Back to top',
     },
   };
 
-  const preferenceKeys = {
-    language: 'roberto-portfolio-language',
-    theme: 'roberto-portfolio-theme',
-  };
 
-  const languageButton = document.getElementById('language-toggle');
-  const themeButton = document.getElementById('theme-toggle');
-  const themeColor = document.querySelector('meta[name="theme-color"]');
-  let currentLanguage = localStorage.getItem(preferenceKeys.language) || 'es';
-  let currentTheme = localStorage.getItem(preferenceKeys.theme)
-    || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  let languageChanging = false;
+const languageButton = document.querySelector('#language-toggle');
+const themeButton = document.querySelector('#theme-toggle');
+const themePreference = matchMedia('(prefers-color-scheme: dark)');
+let language = 'es';
 
-  function updateThemeControl() {
-    const copy = translations[currentLanguage];
-    const action = currentTheme === 'dark' ? copy.themeToLight : copy.themeToDark;
-    const label = themeButton.querySelector('.tool-label');
+function readPreference(key) {
+  try { return localStorage.getItem(key); } catch { return null; }
+}
 
-    label.textContent = action;
-    themeButton.setAttribute('aria-label', action);
-  }
+function savePreference(key, value) {
+  try { localStorage.setItem(key, value); } catch { /* La página también funciona sin almacenamiento. */ }
+}
 
-  function applyLanguage(language) {
-    const copy = translations[language];
-    currentLanguage = language;
+function updateThemeButton() {
+  const dark = document.documentElement.dataset.theme === 'dark';
+  const label = translations[language][dark ? 'themeToLight' : 'themeToDark'];
+  themeButton.setAttribute('aria-label', label);
+  themeButton.title = label;
+  themeButton.setAttribute('aria-pressed', String(dark));
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#141217' : '#ffffff';
+}
 
-    document.documentElement.lang = language;
-    document.title = copy.title;
-    document.querySelector('meta[name="description"]').content = copy.description;
-
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-      element.textContent = copy[element.dataset.i18n];
-    });
-
-    languageButton.querySelector('strong').textContent = language === 'es' ? 'EN' : 'ES';
-    languageButton.setAttribute('aria-label', copy.languageAction);
-    localStorage.setItem(preferenceKeys.language, language);
-    updateThemeControl();
-  }
-
-  function applyTheme(theme) {
-    currentTheme = theme;
-    document.documentElement.dataset.theme = theme;
-    themeColor.content = theme === 'dark' ? '#1b1a17' : '#efe7d6';
-    localStorage.setItem(preferenceKeys.theme, theme);
-    updateThemeControl();
-  }
-
-  function changeLanguage() {
-    if (languageChanging) return;
-
-    const nextLanguage = currentLanguage === 'es' ? 'en' : 'es';
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (reducedMotion) {
-      applyLanguage(nextLanguage);
-      return;
-    }
-
-    languageChanging = true;
-    document.body.classList.add('language-changing');
-
-    window.setTimeout(() => {
-      applyLanguage(nextLanguage);
-
-      window.requestAnimationFrame(() => {
-        document.body.classList.remove('language-changing');
-        languageChanging = false;
-      });
-    }, 180);
-  }
-
-  languageButton.addEventListener('click', changeLanguage);
-
-  themeButton.addEventListener('click', () => {
-    applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+function applyLanguage(value) {
+  language = Object.hasOwn(translations, value) ? value : 'es';
+  const copy = translations[language];
+  document.documentElement.lang = language;
+  document.title = copy.title;
+  document.querySelector('meta[name="description"]').content = copy.description;
+  document.querySelectorAll('[data-i18n]').forEach((element) => {
+    const text = copy[element.dataset.i18n];
+    if (text) element.textContent = text;
   });
+  languageButton.querySelector('strong').textContent = language === 'es' ? 'EN' : 'ES';
+  languageButton.setAttribute('aria-label', copy.languageAction);
+  updateThemeButton();
+}
 
-  applyLanguage(currentLanguage);
-  applyTheme(currentTheme);
+languageButton.addEventListener('click', () => {
+  applyLanguage(language === 'es' ? 'en' : 'es');
+  savePreference('roberto-portfolio-language', language);
+});
+
+themeButton.addEventListener('click', () => {
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = theme;
+  savePreference('roberto-portfolio-theme', theme);
+  updateThemeButton();
+});
+
+themePreference.addEventListener('change', (event) => {
+  if (!['dark', 'light'].includes(readPreference('roberto-portfolio-theme'))) {
+    document.documentElement.dataset.theme = event.matches ? 'dark' : 'light';
+    updateThemeButton();
+  }
+});
+
+applyLanguage(readPreference('roberto-portfolio-language'));
