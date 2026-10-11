@@ -1,5 +1,23 @@
   const translations = {
     es: {
+      headline: 'Aplicaciones útiles. Detalles que importan.',
+      selectedWork: 'Selección de trabajo',
+      workNote: 'Del problema a una aplicación que puedes probar.',
+      imageCaption: 'VeriQ · Captura del entorno de verificación con datos de prueba.',
+      challengeLabel: 'El reto',
+      challengeText: 'Editar un caso sin perder la evidencia de lo que se probó.',
+      decisionLabel: 'La decisión',
+      decisionText: 'Guardar una copia del caso en cada ejecución y proteger su historial.',
+      evidenceLabel: 'La evidencia',
+      evidenceText: '47 pruebas aprobadas y resultados documentados ↗',
+      moreProjects: 'Más proyectos y ejercicios',
+      nextStep: 'Sigamos la conversación',
+      contactHeading: '¿Buscas a alguien para tu equipo?',
+      navLabel: 'Navegación principal',
+      homeLabel: 'Roberto López, inicio',
+      githubLabel: 'GitHub de Roberto Antonio López',
+      imageAlt: 'Dashboard de VeriQ con casos, resultados de pruebas y defectos',
+
       title: 'Roberto Antonio López García — Desarrollador',
       description: 'Portafolio de Roberto Antonio López García, desarrollador full-stack.',
       role: 'Desarrollador de software',
@@ -37,13 +55,31 @@
       themeToLight: 'Cambiar a modo claro',
       location: 'República Dominicana',
       featured: 'Último proyecto',
-      veriqDescription: 'Gestión de casos de prueba, ejecuciones y defectos. Conserva el historial de cada ejecución y muestra métricas desde PostgreSQL. Incluye 47 pruebas automatizadas, una colección de Postman y documentación de QA. Demo compartida con datos de ejemplo.',
+      veriqDescription: 'Un espacio para definir qué probar, registrar resultados y seguir defectos hasta su cierre. API con Express, PostgreSQL en Neon y una demo compartida en Cloudflare Workers.',
       postulaDescription: 'Gestor de postulaciones laborales con seguimiento por etapas, filtros y próxima entrevista. API con Express, datos en PostgreSQL con Neon e interfaz con Flexbox. Desplegado en Cloudflare Workers.',
       tools: 'Herramientas',
       skip: 'Saltar al contenido',
       backTop: 'Volver al inicio',
     },
     en: {
+      headline: 'Useful applications. Thoughtful details.',
+      selectedWork: 'Selected work',
+      workNote: 'From a problem to an application you can try.',
+      imageCaption: 'VeriQ · Verification environment with test data.',
+      challengeLabel: 'The challenge',
+      challengeText: 'Edit a test case without losing evidence of what was tested.',
+      decisionLabel: 'The decision',
+      decisionText: 'Save a snapshot with each run and protect its history.',
+      evidenceLabel: 'The evidence',
+      evidenceText: '47 passing tests and documented results ↗',
+      moreProjects: 'More projects and exercises',
+      nextStep: 'Let’s start a conversation',
+      contactHeading: 'Looking for someone to join your team?',
+      navLabel: 'Main navigation',
+      homeLabel: 'Roberto López, home',
+      githubLabel: 'Roberto Antonio López on GitHub',
+      imageAlt: 'VeriQ dashboard with test cases, execution results and defects',
+
       title: 'Roberto Antonio López García — Developer',
       description: 'Portfolio of Roberto Antonio López García, a full-stack developer.',
       role: 'Software developer',
@@ -81,7 +117,7 @@
       themeToLight: 'Switch to light mode',
       location: 'Dominican Republic',
       featured: 'Latest project',
-      veriqDescription: 'Test case, execution and defect management. Preserves the history of each test run and displays metrics from PostgreSQL. Includes 47 automated tests, a Postman collection and QA documentation. Shared demo with sample data.',
+      veriqDescription: 'A workspace to define what to test, record results and track defects through closure. Express API, PostgreSQL on Neon and a shared demo on Cloudflare Workers.',
       postulaDescription: 'Job application tracker with stages, filters and upcoming interviews. Express API, PostgreSQL data hosted on Neon and a Flexbox interface. Deployed on Cloudflare Workers.',
       tools: 'Tools',
       skip: 'Skip to content',
@@ -109,7 +145,7 @@ function updateThemeButton() {
   themeButton.setAttribute('aria-label', label);
   themeButton.title = label;
   themeButton.setAttribute('aria-pressed', String(dark));
-  document.querySelector('meta[name="theme-color"]').content = dark ? '#141217' : '#ffffff';
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#141c19' : '#f7f7f2';
 }
 
 function applyLanguage(value) {
@@ -122,6 +158,10 @@ function applyLanguage(value) {
     const text = copy[element.dataset.i18n];
     if (text) element.textContent = text;
   });
+  document.querySelector('nav').setAttribute('aria-label', copy.navLabel);
+  document.querySelector('.brand').setAttribute('aria-label', copy.homeLabel);
+  document.querySelector('.hero .github-link').setAttribute('aria-label', copy.githubLabel);
+  document.querySelector('.project-visual img').alt = copy.imageAlt;
   languageButton.querySelector('strong').textContent = language === 'es' ? 'EN' : 'ES';
   languageButton.setAttribute('aria-label', copy.languageAction);
   updateThemeButton();
