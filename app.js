@@ -1,189 +1,64 @@
-  const translations = {
-    es: {
-      headline: 'Aplicaciones útiles. Detalles que importan.',
-      selectedWork: 'Selección de trabajo',
-      workNote: 'Del problema a una aplicación que puedes probar.',
-      imageCaption: 'VeriQ · Captura del entorno de verificación con datos de prueba.',
-      challengeLabel: 'El reto',
-      challengeText: 'Editar un caso sin perder la evidencia de lo que se probó.',
-      decisionLabel: 'La decisión',
-      decisionText: 'Guardar una copia del caso en cada ejecución y proteger su historial.',
-      evidenceLabel: 'La evidencia',
-      evidenceText: '47 pruebas aprobadas y resultados documentados ↗',
-      moreProjects: 'Más proyectos y ejercicios',
-      nextStep: 'Sigamos la conversación',
-      contactHeading: '¿Buscas a alguien para tu equipo?',
-      navLabel: 'Navegación principal',
-      homeLabel: 'Roberto López, inicio',
-      githubLabel: 'GitHub de Roberto Antonio López',
-      imageAlt: 'Dashboard de VeriQ con casos, resultados de pruebas y defectos',
-
-      title: 'Roberto Antonio López García — Desarrollador',
-      description: 'Portafolio de Roberto Antonio López García, desarrollador full-stack.',
-      role: 'Desarrollador de software',
-      intro: 'Desarrollo aplicaciones web con JavaScript, Node.js y PostgreSQL. Me interesa construir herramientas útiles y entender bien cómo funcionan.',
-      viewProjects: 'Ver proyectos',
-      aboutTitle: 'Sobre mí',
-      aboutBody: 'Soy desarrollador de software y me interesan especialmente el backend y las bases de datos. Trabajo con JavaScript, Express y SQL para crear aplicaciones completas, desde la API hasta la interfaz.',
-      aboutNote: 'Busco una oportunidad de pasantía para aprender de un equipo y aportar lo que he practicado en mis proyectos: validación de datos, pruebas y despliegue.',
-      projectsTitle: 'Proyectos',
-      projectsNote: 'Cada uno resuelto de punta a punta: interfaz, lógica y datos.',
-      noDemo: 'sin demo pública',
-      demoAvailable: 'demo disponible',
-      tackleDescription: 'Plataforma de gestión de tickets de soporte técnico. Permite crear, consultar, editar y eliminar incidencias, buscarlas y filtrarlas por estado o prioridad. Incluye validación del lado del servidor, estadísticas de carga de trabajo y pruebas de integración para la API.',
-      countryDescription: 'Plataforma ciudadana para reportar problemas de la comunidad y darles seguimiento. Busca ofrecer una forma sencilla y transparente de comunicar situaciones que necesitan atención.',
-      payrollDescription: 'Sistema básico para administrar empleados y procesar pagos mensuales. Permite crear, editar, buscar y eliminar empleados, configurar porcentajes de deducción, calcular salario bruto y neto, y consultar el historial de nóminas procesadas.',
-      todoDescription: 'Aplicación para organizar tareas y pendientes diarios. Permite mantener el trabajo ordenado mediante una experiencia sencilla, rápida y enfocada en lo esencial.',
-      viewRepository: 'Ver repositorio',
-      viewDemo: 'Ver demo',
-      skillsTitle: 'Habilidades',
-      interface: 'Interfaz',
-      server: 'Servidor',
-      data: 'Datos',
-      practice: 'Práctica',
-      validation: 'Validación de formularios',
-      testing: 'Pruebas de integración',
-      apiDesign: 'Diseño de APIs',
-      contactTitle: 'Hablemos de tu próximo proyecto',
-      contactBody: 'Estoy abierto a oportunidades de pasantía y colaboraciones en desarrollo de software.',
-      emailMe: 'Escríbeme',
-      home: 'Inicio',
-      contactLabel: 'Contacto',
-      languageAction: 'Cambiar a inglés',
-      themeAction: 'Modo oscuro',
-      themeToDark: 'Cambiar a modo oscuro',
-      themeToLight: 'Cambiar a modo claro',
-      location: 'República Dominicana',
-      featured: 'Último proyecto',
-      veriqDescription: 'Un espacio para definir qué probar, registrar resultados y seguir defectos hasta su cierre. API con Express, PostgreSQL en Neon y una demo compartida en Cloudflare Workers.',
-      postulaDescription: 'Gestor de postulaciones laborales con seguimiento por etapas, filtros y próxima entrevista. API con Express, datos en PostgreSQL con Neon e interfaz con Flexbox. Desplegado en Cloudflare Workers.',
-      tools: 'Herramientas',
-      skip: 'Saltar al contenido',
-      backTop: 'Volver al inicio',
-    },
-    en: {
-      headline: 'Useful applications. Thoughtful details.',
-      selectedWork: 'Selected work',
-      workNote: 'From a problem to an application you can try.',
-      imageCaption: 'VeriQ · Verification environment with test data.',
-      challengeLabel: 'The challenge',
-      challengeText: 'Edit a test case without losing evidence of what was tested.',
-      decisionLabel: 'The decision',
-      decisionText: 'Save a snapshot with each run and protect its history.',
-      evidenceLabel: 'The evidence',
-      evidenceText: '47 passing tests and documented results ↗',
-      moreProjects: 'More projects and exercises',
-      nextStep: 'Let’s start a conversation',
-      contactHeading: 'Looking for someone to join your team?',
-      navLabel: 'Main navigation',
-      homeLabel: 'Roberto López, home',
-      githubLabel: 'Roberto Antonio López on GitHub',
-      imageAlt: 'VeriQ dashboard with test cases, execution results and defects',
-
-      title: 'Roberto Antonio López García — Developer',
-      description: 'Portfolio of Roberto Antonio López García, a full-stack developer.',
-      role: 'Software developer',
-      intro: 'I build web applications with JavaScript, Node.js and PostgreSQL. I enjoy making useful tools and understanding how they work.',
-      viewProjects: 'View projects',
-      aboutTitle: 'About me',
-      aboutBody: 'I am a software developer with a particular interest in backend development and databases. I use JavaScript, Express and SQL to build complete applications, from the API to the interface.',
-      aboutNote: 'I am looking for an internship where I can learn from a team and contribute the skills I practice in my projects: data validation, testing and deployment.',
-      projectsTitle: 'Projects',
-      projectsNote: 'Each one built end to end: interface, logic and data.',
-      noDemo: 'no public demo',
-      demoAvailable: 'live demo',
-      tackleDescription: 'A technical support ticket management platform. It lets users create, view, edit and delete issues, as well as search and filter them by status or priority. It includes server-side validation, workload statistics and API integration tests.',
-      countryDescription: 'A civic platform for reporting community problems and tracking their progress. It offers a simple and transparent way to communicate situations that need attention.',
-      payrollDescription: 'A basic system for managing employees and processing monthly payments. It supports employee records, configurable deductions, gross and net salary calculations, and payroll history.',
-      todoDescription: 'An application for organizing everyday tasks and responsibilities. It keeps work structured through a simple, fast experience focused on what matters.',
-      viewRepository: 'View repository',
-      viewDemo: 'View demo',
-      skillsTitle: 'Skills',
-      interface: 'Interface',
-      server: 'Server',
-      data: 'Data',
-      practice: 'Practice',
-      validation: 'Form validation',
-      testing: 'Integration testing',
-      apiDesign: 'API design',
-      contactTitle: 'Let’s talk about your next project',
-      contactBody: 'I am open to software development internships and collaborations.',
-      emailMe: 'Email me',
-      home: 'Home',
-      contactLabel: 'Contact',
-      languageAction: 'Cambiar a español',
-      themeAction: 'Dark mode',
-      themeToDark: 'Switch to dark mode',
-      themeToLight: 'Switch to light mode',
-      location: 'Dominican Republic',
-      featured: 'Latest project',
-      veriqDescription: 'A workspace to define what to test, record results and track defects through closure. Express API, PostgreSQL on Neon and a shared demo on Cloudflare Workers.',
-      postulaDescription: 'Job application tracker with stages, filters and upcoming interviews. Express API, PostgreSQL data hosted on Neon and a Flexbox interface. Deployed on Cloudflare Workers.',
-      tools: 'Tools',
-      skip: 'Skip to content',
-      backTop: 'Back to top',
-    },
-  };
-
-
-const languageButton = document.querySelector('#language-toggle');
-const themeButton = document.querySelector('#theme-toggle');
-const themePreference = matchMedia('(prefers-color-scheme: dark)');
-let language = 'es';
-
-function readPreference(key) {
-  try { return localStorage.getItem(key); } catch { return null; }
+'use strict';
+(() => {
+const root = document.documentElement;
+const read = key => { try { return localStorage.getItem(key); } catch { return null; } };
+const save = (key,value) => { try { localStorage.setItem(key,value); } catch {} };
+const en = {
+skip:'Skip to content',aboutTitle:'About me',projectsTitle:'Projects',skillsTitle:'Skills',contactLabel:'Contact',location:'Dominican Republic',role:'Software developer',intro:'I’m a final-term ITLA student and software developer. I build web applications with JavaScript, Node.js and PostgreSQL, with a particular interest in backend development and databases.',viewProjects:'View projects',emailMe:'Email me',workNote:'From a problem to an application you can try.',imageCaption:'VeriQ · Verification dashboard with test data.',featured:'Latest project',veriqDescription:'A place to define what to test, record results and track defects through to closure. Express API, PostgreSQL on Neon and a shared demo on Cloudflare Workers.',challengeLabel:'The challenge',challengeText:'Edit a test case without losing evidence of what was tested.',decisionLabel:'The decision',decisionText:'Save a copy of the case with each execution and protect its history.',evidenceLabel:'The evidence',evidenceText:'47 passing tests and documented results ↗',viewDemo:'View demo',viewRepository:'View repository',demoAvailable:'demo available',postulaDescription:'A job application tracker with stage tracking, filters and upcoming interviews. Express API, PostgreSQL on Neon and a Flexbox interface. Deployed on Cloudflare Workers.',tackleDescription:'A technical support ticket management platform. Create, view, edit and delete issues, and search and filter them by status or priority. Includes server-side validation, workload statistics and API integration tests.',moreProjects:'More projects and exercises',noDemo:'no public demo',countryDescription:'A civic platform for reporting community problems and tracking their progress. A simple, transparent way to communicate situations that need attention.',payrollDescription:'A basic system for managing employees and processing monthly payments. Create, edit, search and delete employees, configure deduction rates, calculate gross and net pay, and consult payroll history.',todoDescription:'An application for organizing daily tasks and to-dos. Keep work organized with a simple, fast experience focused on the essentials.',aboutNote:'I’m looking for an internship where I can learn from a team and contribute what I’ve practiced in my projects: data validation, testing and deployment.',data:'Data',tools:'Tools',contactHeading:'Looking for someone to join your team?',contactBody:'I’m open to internship opportunities and collaborations in software development.',backTop:'Back to top',imageMissing:'Preview not included. Explore VeriQ in the demo ↗'
+};
+const translated = [...document.querySelectorAll('[data-i18n]')];
+const spanish = new Map(translated.map(el => [el,el.textContent]));
+let language = read('roberto-portfolio-language') === 'en' ? 'en' : 'es';
+const shell = document.querySelector('.shell');
+const menu = document.getElementById('sidebar-content');
+const toggle = document.getElementById('sidebar-toggle');
+const mobile = matchMedia('(max-width: 900px)');
+let collapsed = mobile.matches || read('roberto-portfolio-sidebar') === 'collapsed';
+function labels() {
+ const english = language === 'en';
+ const dark = root.dataset.theme === 'dark';
+ document.getElementById('theme-toggle').setAttribute('aria-pressed',String(dark));
+ document.querySelector('meta[name="theme-color"]').content=dark?'#0a100d':'#f3f5f1';
+ document.getElementById('language-toggle').innerHTML = `<strong>${english?'ES':'EN'}</strong>`;
+ document.getElementById('language-toggle').setAttribute('aria-label',english?'Switch to Spanish':'Cambiar a inglés');
+ document.getElementById('theme-toggle').setAttribute('aria-label',english?(dark?'Switch to light mode':'Switch to dark mode'):(dark?'Cambiar a modo claro':'Cambiar a modo oscuro'));
+ toggle.setAttribute('aria-label',english?(collapsed?'Expand menu':'Collapse menu'):(collapsed?'Expandir menú':'Colapsar menú'));
+ document.querySelector('nav').setAttribute('aria-label',english?'Main navigation':'Navegación principal');
+ document.querySelector('.brand').setAttribute('aria-label',english?'Roberto López, home':'Roberto López, inicio');
 }
-
-function savePreference(key, value) {
-  try { localStorage.setItem(key, value); } catch { /* La página también funciona sin almacenamiento. */ }
+function renderMenu() {
+ shell.classList.toggle('is-collapsed',collapsed);
+ menu.hidden = collapsed;
+ toggle.setAttribute('aria-expanded',String(!collapsed));
+ labels();
 }
-
-function updateThemeButton() {
-  const dark = document.documentElement.dataset.theme === 'dark';
-  const label = translations[language][dark ? 'themeToLight' : 'themeToDark'];
-  themeButton.setAttribute('aria-label', label);
-  themeButton.title = label;
-  themeButton.setAttribute('aria-pressed', String(dark));
-  document.querySelector('meta[name="theme-color"]').content = dark ? '#141c19' : '#f7f7f2';
+function translate() {
+ root.lang=language;
+ document.title=language==='en'?'Roberto Antonio López García — Software developer':'Roberto Antonio López García — Desarrollador de software';
+ document.querySelector('meta[name="description"]').content=language==='en'?'Portfolio of Roberto Antonio López García, software developer in the Dominican Republic.':'Portafolio de Roberto Antonio López García, desarrollador de software en República Dominicana.';
+ translated.forEach(el=>el.textContent=language==='en' ? en[el.dataset.i18n] ?? spanish.get(el) : spanish.get(el));
+ document.querySelectorAll('[data-es][data-en]').forEach(el=>el.textContent=el.dataset[language]);
+ document.querySelector('.project-visual img').alt=language==='en'?'VeriQ dashboard showing test cases, results and defects':'Dashboard de VeriQ con casos, resultados de pruebas y defectos';
+ labels();
 }
-
-function applyLanguage(value) {
-  language = Object.hasOwn(translations, value) ? value : 'es';
-  const copy = translations[language];
-  document.documentElement.lang = language;
-  document.title = copy.title;
-  document.querySelector('meta[name="description"]').content = copy.description;
-  document.querySelectorAll('[data-i18n]').forEach((element) => {
-    const text = copy[element.dataset.i18n];
-    if (text) element.textContent = text;
-  });
-  document.querySelector('nav').setAttribute('aria-label', copy.navLabel);
-  document.querySelector('.brand').setAttribute('aria-label', copy.homeLabel);
-  document.querySelector('.hero .github-link').setAttribute('aria-label', copy.githubLabel);
-  document.querySelector('.project-visual img').alt = copy.imageAlt;
-  languageButton.querySelector('strong').textContent = language === 'es' ? 'EN' : 'ES';
-  languageButton.setAttribute('aria-label', copy.languageAction);
-  updateThemeButton();
+document.getElementById('language-toggle').addEventListener('click',()=>{language=language==='es'?'en':'es';save('roberto-portfolio-language',language);translate();});
+document.getElementById('theme-toggle').addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';save('roberto-portfolio-theme',root.dataset.theme);labels();});
+toggle.addEventListener('click',()=>{collapsed=!collapsed;if(!mobile.matches)save('roberto-portfolio-sidebar',collapsed?'collapsed':'expanded');renderMenu();});
+mobile.addEventListener('change',()=>{collapsed=mobile.matches || read('roberto-portfolio-sidebar')==='collapsed';renderMenu();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!collapsed){collapsed=true;toggle.focus();renderMenu();}});
+const links=[...document.querySelectorAll('nav a')];
+links.forEach(link=>link.addEventListener('click',()=>{if(mobile.matches){collapsed=true;renderMenu();const target=document.querySelector(link.hash);target.tabIndex=-1;target.focus({preventScroll:true});}}));
+function currentSection() {
+ let active=null;
+ links.forEach(link=>{const section=document.querySelector(link.hash);if(section.getBoundingClientRect().top<=innerHeight*.4)active=link;});
+ links.forEach(link=>{if(link===active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
 }
-
-languageButton.addEventListener('click', () => {
-  applyLanguage(language === 'es' ? 'en' : 'es');
-  savePreference('roberto-portfolio-language', language);
-});
-
-themeButton.addEventListener('click', () => {
-  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-  document.documentElement.dataset.theme = theme;
-  savePreference('roberto-portfolio-theme', theme);
-  updateThemeButton();
-});
-
-themePreference.addEventListener('change', (event) => {
-  if (!['dark', 'light'].includes(readPreference('roberto-portfolio-theme'))) {
-    document.documentElement.dataset.theme = event.matches ? 'dark' : 'light';
-    updateThemeButton();
-  }
-});
-
-applyLanguage(readPreference('roberto-portfolio-language'));
+let scheduled=false;
+addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(()=>{currentSection();scheduled=false;});}},{passive:true});
+const img=document.querySelector('.project-visual img');
+function missingImage(){img.hidden=true;img.parentElement.hidden=true;document.querySelector('.project-visual figcaption').hidden=true;document.querySelector('.image-fallback').hidden=false;}
+img.addEventListener('error',missingImage);
+if(img.complete&&!img.naturalWidth)missingImage();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',event=>{if(!['light','dark'].includes(read('roberto-portfolio-theme'))){root.dataset.theme=event.matches?'dark':'light';labels();}});
+translate();renderMenu();currentSection();
+})();

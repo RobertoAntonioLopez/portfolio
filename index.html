@@ -1,134 +1,314 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Portafolio de Roberto Antonio López García, desarrollador de software en República Dominicana.">
-<meta name="theme-color" content="#ffffff">
-<title>Roberto Antonio López García — Desarrollador de software</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script>
-try {
-  const saved = localStorage.getItem('roberto-portfolio-theme');
-  document.documentElement.dataset.theme = ['light', 'dark'].includes(saved) ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-} catch { document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
-</script>
-<script src="app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Portafolio de Roberto Antonio López García, desarrollador de software en República Dominicana.">
+  <meta name="theme-color" content="#0f2b1f">
+  <title>Roberto Antonio López García — Desarrollador de software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try {
+      const saved = localStorage.getItem('roberto-portfolio-theme');
+      document.documentElement.dataset.theme = ['light', 'dark'].includes(saved) ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+  </script>
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="app.js" defer></script>
 </head>
+
 <body>
-<a class="skip-link" href="#contenido" data-i18n="skip">Saltar al contenido</a>
-<header class="header wrap">
-<a class="brand" href="#inicio" aria-label="Roberto López, inicio">RL<span>.</span></a>
-<nav aria-label="Navegación principal"><a href="#sobre-mi" data-i18n="aboutTitle">Sobre mí</a><a href="#proyectos" data-i18n="projectsTitle">Proyectos</a><a href="#habilidades" data-i18n="skillsTitle">Habilidades</a><a href="#contacto" data-i18n="contactLabel">Contacto</a></nav>
-<div class="tools"><button id="language-toggle" type="button" aria-label="Cambiar a inglés"><strong>EN</strong></button><button id="theme-toggle" type="button" aria-label="Cambiar a modo oscuro"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4 8.3 8.3 0 1 0 20 14.2Z"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div>
-</header>
-<main id="contenido" class="wrap">
-<section class="hero" id="inicio">
-<p class="location" data-i18n="location">República Dominicana</p>
-<p class="author">Roberto Antonio López García</p><h1 data-i18n="headline">Aplicaciones útiles.<br>Detalles que importan.</h1>
-<p class="role" data-i18n="role">Desarrollador de software</p>
-<p class="intro" data-i18n="intro">Desarrollo aplicaciones web con JavaScript, Node.js y PostgreSQL. Me interesa construir herramientas útiles y entender bien cómo funcionan.</p>
-<div class="hero-links"><a class="contact-shortcut" href="mailto:robertoalg.dev@gmail.com" data-i18n="emailMe">Escríbeme</a><a class="button" href="#proyectos" data-i18n="viewProjects">Ver proyectos</a><a class="github-link" href="https://github.com/RobertoAntonioLopez" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Roberto Antonio López"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.64 1.22 3.28.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.28-5.14 5.56.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub</span></a></div>
-</section>
+  <a class="skip-link" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+  <div class="shell">
 
-<section class="section" id="proyectos"><div class="section-heading"><div><p class="eyebrow" data-i18n="selectedWork">Selección de trabajo</p><h2 data-i18n="projectsTitle">Proyectos</h2></div><p data-i18n="workNote">Del problema a una aplicación que puedes probar.</p></div>
-<div class="project-list">
-<article class="project featured">
-  <figure class="project-visual"><a href="https://veriq.roberto-antonio-lopez.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="VeriQ: demo"><img src="assets/veriq-dashboard.jpg" alt="Dashboard de VeriQ con casos, resultados de pruebas y defectos" width="1265" height="712" loading="lazy"></a><figcaption data-i18n="imageCaption">VeriQ · Captura del entorno de verificación con datos de prueba.</figcaption></figure>
-  <div class="project-content">
-    <div class="project-heading"><h3>VeriQ<span class="project-number" aria-hidden="true">01</span></h3><span class="project-status" data-i18n="featured">Último proyecto</span></div>
-    <p class="project-description" data-i18n="veriqDescription">Un espacio para definir qué probar, registrar resultados y seguir defectos hasta su cierre. API con Express, PostgreSQL en Neon y una demo compartida en Cloudflare Workers.</p>
-    <dl class="project-facts"><div><dt data-i18n="challengeLabel">El reto</dt><dd data-i18n="challengeText">Editar un caso sin perder la evidencia de lo que se probó.</dd></div><div><dt data-i18n="decisionLabel">La decisión</dt><dd data-i18n="decisionText">Guardar una copia del caso en cada ejecución y proteger su historial.</dd></div><div><dt data-i18n="evidenceLabel">La evidencia</dt><dd><a href="https://github.com/RobertoAntonioLopez/veriq/blob/main/docs/EXECUTION_RESULTS.md" target="_blank" rel="noopener noreferrer" data-i18n="evidenceText">47 pruebas aprobadas y resultados documentados ↗</a></dd></div></dl>
-    <div class="technologies"><span class="technology js">JavaScript</span><span class="technology node">Node.js</span><span class="technology express">Express</span><span class="technology postgres">PostgreSQL</span><span class="technology node">Neon</span><span class="technology js">node:test</span><span class="technology html">Cloudflare Workers</span></div>
-    <div class="project-links"><a class="project-link" href="https://veriq.roberto-antonio-lopez.workers.dev/" target="_blank" rel="noopener noreferrer" data-i18n="viewDemo">Ver demo</a><a class="project-link" href="https://github.com/RobertoAntonioLopez/veriq" target="_blank" rel="noopener noreferrer" data-i18n="viewRepository">Ver repositorio</a></div>
+    <header class="header rail">
+<div class="rail-top">
+      <a class="brand" href="#inicio" aria-label="Roberto López, inicio">RL<span>.</span></a>
+      <button id="sidebar-toggle" type="button" aria-expanded="true" aria-controls="sidebar-content" aria-label="Colapsar menú"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h16"/></svg></button></div><div id="sidebar-content">
+<nav aria-label="Navegación principal"><a href="#proyectos"
+          data-i18n="projectsTitle">Proyectos</a><a href="#sobre-mi" data-i18n="aboutTitle">Sobre mí</a><a href="#habilidades" data-i18n="skillsTitle">Habilidades</a><a
+          href="#contacto" data-i18n="contactLabel">Contacto</a></nav>
+      <div class="rail-foot">
+        <div class="tools"><button id="language-toggle" type="button"
+            aria-label="Cambiar a inglés"><strong>EN</strong></button><button id="theme-toggle" type="button"
+            aria-label="Cambiar a modo oscuro"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4 8.3 8.3 0 1 0 20 14.2Z" />
+            </svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
+            </svg></button></div>
+        <a class="rail-link" href="mailto:robertoalg.dev@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 6 9 7 9-7"/></svg><span>robertoalg.dev@gmail.com</span></a>
+        <a class="rail-link" href="https://github.com/RobertoAntonioLopez" target="_blank"
+          rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path
+                d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.64 1.22 3.28.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.28-5.14 5.56.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z" />
+            </svg><span>GitHub ↗</span></a>
+      </div>
+    </div></header>
+
+    <div class="page">
+      <main id="contenido">
+
+        <section class="hero" id="inicio">
+          <p class="hero-eyebrow" data-i18n="role">Desarrollador de software</p>
+<h1 class="author">Roberto Antonio<span>López García<span class="name-dot">.</span></span></h1>
+
+
+
+          <p class="intro" data-i18n="intro">Soy estudiante de término del ITLA y desarrollador de software. Construyo aplicaciones web con JavaScript, Node.js y PostgreSQL, con especial interés en el backend y las bases de datos.</p>
+          <div class="hero-links"><a class="button" href="#proyectos" data-i18n="viewProjects">Ver proyectos</a><a
+              class="contact-shortcut" href="mailto:robertoalg.dev@gmail.com" data-i18n="emailMe">Escríbeme</a></div>
+          <div class="location"><svg class="map" viewBox="0 0 296 202" aria-hidden="true">
+              <path pathLength="1"
+                d="M24.0 17.0 L24.0 18.5 L25.5 16.5 L26.5 17.0 L26.5 19.5 L28.0 21.5 L28.0 23.5 L25.5 23.5 L25.5 25.0 L28.0 28.0 L26.5 29.5 L27.0 33.0 L31.0 39.0 L30.5 42.0 L31.5 43.5 L30.5 50.5 L27.5 50.5 L24.0 53.5 L26.5 57.5 L34.0 61.0 L35.5 63.0 L34.5 67.0 L33.0 68.0 L34.0 69.5 L29.5 72.0 L28.5 74.5 L24.0 77.5 L23.0 80.5 L22.0 79.5 L19.0 79.5 L16.0 82.5 L16.0 83.5 L18.5 82.0 L23.0 83.0 L24.0 86.5 L28.0 89.0 L27.0 101.0 L21.5 104.5 L21.5 108.0 L19.5 109.5 L17.0 108.5 L15.5 109.5 L14.0 108.0 L11.0 108.5 L9.5 107.5 L6.0 109.5 L9.5 111.5 L15.5 120.0 L13.0 121.0 L13.5 122.5 L17.5 124.0 L22.5 129.5 L30.0 132.0 L23.0 144.0 L23.0 146.0 L26.0 148.5 L25.5 150.5 L26.5 151.5 L26.0 155.0 L24.5 156.5 L31.5 162.0 L32.5 165.5 L31.0 167.5 L35.0 173.5 L30.0 177.5 L31.0 178.5 L40.0 178.0 L42.5 179.0 L44.5 181.0 L46.5 187.0 L50.0 191.0 L54.5 184.5 L58.0 174.5 L60.0 174.0 L60.5 171.5 L65.5 167.5 L73.5 156.0 L76.0 154.0 L78.5 147.0 L74.5 140.0 L74.5 138.0 L78.5 134.5 L82.0 135.0 L85.0 137.5 L85.5 139.5 L88.0 139.5 L92.5 136.0 L94.5 132.0 L97.0 132.5 L98.0 131.0 L99.0 132.0 L103.5 131.5 L105.5 129.0 L105.0 127.5 L107.0 125.5 L113.5 126.0 L116.5 130.5 L115.5 132.5 L116.5 134.0 L114.5 137.5 L120.5 142.0 L119.5 143.5 L121.0 144.5 L128.5 141.0 L134.5 142.0 L137.0 141.0 L140.0 141.0 L141.0 142.0 L143.5 141.0 L147.5 141.5 L154.0 134.0 L155.0 131.0 L159.0 126.0 L164.0 125.0 L169.0 122.0 L183.5 123.0 L185.0 126.5 L187.0 127.5 L188.5 127.0 L189.5 124.0 L191.0 124.0 L194.0 127.0 L198.5 127.0 L202.5 125.5 L210.0 126.0 L212.5 124.5 L221.0 123.0 L222.0 125.5 L229.5 128.0 L239.0 127.0 L240.0 126.0 L249.0 128.5 L249.5 130.5 L252.0 132.5 L256.0 140.0 L256.0 142.0 L264.0 142.0 L264.5 138.5 L268.0 133.0 L266.5 129.5 L268.5 128.5 L274.5 131.5 L278.5 131.0 L279.5 125.5 L289.0 111.5 L286.5 106.5 L285.0 105.5 L283.5 106.0 L279.0 101.0 L272.0 97.0 L259.0 84.0 L248.5 79.5 L246.5 80.0 L244.0 77.5 L239.0 77.0 L237.5 78.5 L235.5 78.5 L236.5 79.5 L235.5 80.5 L232.5 81.0 L230.0 80.5 L225.5 76.0 L226.5 77.5 L225.5 80.0 L222.5 78.0 L215.5 78.0 L214.0 76.5 L209.5 76.0 L204.5 71.5 L200.0 72.0 L202.0 71.5 L203.0 72.5 L202.0 74.0 L198.0 73.0 L188.5 73.5 L187.0 71.0 L188.0 63.0 L189.0 62.0 L193.0 62.0 L194.5 63.0 L198.5 62.5 L205.0 65.0 L206.5 63.5 L213.5 63.5 L219.0 65.0 L220.0 61.5 L224.5 57.5 L224.5 56.0 L223.5 55.0 L222.5 56.0 L217.5 56.5 L217.0 55.0 L220.0 51.5 L218.0 51.0 L213.0 54.0 L211.5 57.0 L202.5 53.5 L193.5 54.0 L191.0 56.0 L185.5 56.5 L184.5 57.5 L177.0 56.5 L174.0 54.0 L169.0 45.5 L169.5 39.5 L167.0 37.0 L168.5 30.5 L162.5 25.5 L155.5 26.0 L153.0 29.5 L147.0 30.5 L135.0 27.0 L131.0 23.5 L130.0 21.0 L126.0 18.0 L122.0 17.5 L119.5 19.5 L111.5 19.0 L103.0 13.5 L100.5 13.5 L95.0 7.5 L91.5 8.0 L89.0 7.0 L88.0 9.0 L86.5 8.0 L87.5 7.5 L84.0 6.0 L78.5 7.0 L77.0 10.0 L73.5 11.5 L69.5 12.0 L67.5 10.5 L66.0 13.5 L56.0 12.0 L46.0 7.5 L38.5 7.0 L35.5 9.5 L33.5 8.0 L34.0 10.5 L32.0 12.5 L26.5 14.5Z" />
+              <path pathLength="1"
+                d="M254.0 144.0 L254.0 145.5 L257.0 148.5 L260.0 149.5 L262.5 149.5 L265.5 148.5 L267.0 149.5 L269.5 149.5 L270.0 150.0 L270.0 148.0 L268.5 146.5 L263.5 146.5 L262.0 145.5 L260.0 146.0 L255.5 143.5Z" />
+              <path pathLength="1"
+                d="M46.5 193.0 L45.0 193.0 L44.5 191.5 L42.5 190.5 L40.0 195.5 L40.5 196.0 L43.5 195.5 L45.5 194.5Z" />
+              <circle class="map-ring" cx="166" cy="117" r="14" />
+              <circle class="map-dot" cx="166" cy="117" r="10" />
+            </svg><span data-i18n="location">República Dominicana</span></div>
+
+        </section>
+
+        <section class="section" id="proyectos">
+          <div class="section-heading">
+            <h2 data-i18n="projectsTitle">Proyectos</h2>
+            <p data-i18n="workNote">Del problema a una aplicación que puedes probar.</p>
+          </div>
+          <div class="project-list">
+
+            <article class="project featured">
+              <figure class="project-visual"><a href="https://veriq.roberto-antonio-lopez.workers.dev/" target="_blank"
+                  rel="noopener noreferrer" aria-label="VeriQ: demo"><img src="assets/veriq-dashboard.jpg"
+                    alt="Dashboard de VeriQ con casos, resultados de pruebas y defectos" width="1265" height="712"
+                    loading="lazy"></a>
+                <figcaption data-i18n="imageCaption">VeriQ · Captura del entorno de verificación con datos de prueba.
+                </figcaption><a class="image-fallback" hidden href="https://veriq.roberto-antonio-lopez.workers.dev/" target="_blank" rel="noopener noreferrer" data-i18n="imageMissing">Vista previa no incluida. Puedes explorar VeriQ en la demo ↗</a>
+              </figure>
+              <div class="project-content">
+                <div class="project-heading">
+                  <h3>VeriQ<span class="project-number" aria-hidden="true">01</span></h3><span
+                    class="project-status is-new" data-i18n="featured">Último proyecto</span>
+                </div>
+                <p class="project-description" data-i18n="veriqDescription">Un espacio para definir qué probar,
+                  registrar resultados y seguir defectos hasta su cierre. API con Express, PostgreSQL en Neon y una demo
+                  compartida en Cloudflare Workers.</p>
+                          <figure class="run" aria-hidden="true">
+            <div class="run-bar"><span>node:test</span><span class="run-pass">pass</span></div>
+            <ul class="run-list">
+              <li style="--i:0"><b>GET</b><span>/api/casos</span><em>200</em></li>
+              <li style="--i:1"><b>POST</b><span>/api/casos</span><em>201</em></li>
+              <li style="--i:2"><b>POST</b><span>/api/ejecuciones</span><em>201</em></li>
+              <li style="--i:3"><b>PATCH</b><span>/api/defectos/:id</span><em>200</em></li>
+            </ul>
+            <div class="run-total"><span>tests 47</span><span>pass 47</span><span>fail 0</span></div>
+          </figure>
+<dl class="project-facts">
+                  <div>
+                    <dt data-i18n="challengeLabel">El reto</dt>
+                    <dd data-i18n="challengeText">Editar un caso sin perder la evidencia de lo que se probó.</dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="decisionLabel">La decisión</dt>
+                    <dd data-i18n="decisionText">Guardar una copia del caso en cada ejecución y proteger su historial.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="evidenceLabel">La evidencia</dt>
+                    <dd><a class="evidence"
+                        href="https://github.com/RobertoAntonioLopez/veriq/blob/main/docs/EXECUTION_RESULTS.md"
+                        target="_blank" rel="noopener noreferrer" data-i18n="evidenceText">47 pruebas aprobadas y
+                        resultados documentados ↗</a></dd>
+                  </div>
+                </dl>
+                <div class="technologies"><span class="technology">JavaScript</span><span
+                    class="technology">Node.js</span><span class="technology">Express</span><span
+                    class="technology">PostgreSQL</span><span class="technology">Neon</span><span
+                    class="technology">node:test</span><span class="technology">Cloudflare Workers</span></div>
+                <div class="project-links"><a class="project-link"
+                    href="https://veriq.roberto-antonio-lopez.workers.dev/" target="_blank" rel="noopener noreferrer"
+                    data-i18n="viewDemo">Ver demo</a><a class="project-link"
+                    href="https://github.com/RobertoAntonioLopez/veriq" target="_blank" rel="noopener noreferrer"
+                    data-i18n="viewRepository">Ver repositorio</a></div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-content">
+                <div class="project-heading">
+                  <h3>Postula</h3><span class="project-status is-live" data-i18n="demoAvailable">demo disponible</span>
+                </div>
+                <p class="project-description" data-i18n="postulaDescription">Gestor de postulaciones laborales con
+                  seguimiento por etapas, filtros y próxima entrevista. API con Express, datos en PostgreSQL con Neon e
+                  interfaz con Flexbox. Desplegado en Cloudflare Workers.</p>
+                <div class="technologies"><span class="technology">JavaScript</span><span
+                    class="technology">Node.js</span><span class="technology">Express</span><span
+                    class="technology">PostgreSQL</span><span class="technology">Neon</span><span class="technology">CSS
+                    Flexbox</span><span class="technology">Cloudflare Workers</span></div>
+                <div class="project-links"><a class="project-link"
+                    href="https://postula.roberto-antonio-lopez.workers.dev" target="_blank" rel="noopener noreferrer"
+                    data-i18n="viewDemo">Ver demo</a><a class="project-link"
+                    href="https://github.com/RobertoAntonioLopez/postula" target="_blank" rel="noopener noreferrer"
+                    data-i18n="viewRepository">Ver repositorio</a></div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-content">
+                <div class="project-heading">
+                  <h3>Tackle</h3><span class="project-status is-live" data-i18n="demoAvailable">demo disponible</span>
+                </div>
+                <p class="project-description" data-i18n="tackleDescription">Plataforma de gestión de tickets de soporte
+                  técnico. Permite crear, consultar, editar y eliminar incidencias, buscarlas y filtrarlas por estado o
+                  prioridad. Incluye validación del lado del servidor, estadísticas de carga de trabajo y pruebas de
+                  integración para la API.</p>
+                <div class="technologies"><span class="technology">HTML</span><span class="technology">CSS</span><span
+                    class="technology">JavaScript</span><span class="technology">Node.js</span><span
+                    class="technology">Express</span><span class="technology">PostgreSQL</span><span
+                    class="technology">SQL</span></div>
+                <div class="project-links"><a class="project-link" href="https://tackle-demo.onrender.com/#overview"
+                    target="_blank" rel="noopener" data-i18n="viewDemo">Ver demo</a><a class="project-link"
+                    href="https://github.com/RobertoAntonioLopez/tackle" target="_blank" rel="noopener"
+                    data-i18n="viewRepository">Ver repositorio</a></div>
+              </div>
+            </article>
+
+            <details class="more-projects">
+              <summary data-i18n="moreProjects">Más proyectos y ejercicios</summary>
+              <div class="additional-projects">
+
+                <article class="project">
+                  <div class="project-content">
+                    <div class="project-heading">
+                      <h3>Ayuda a tu País</h3><span class="project-status is-off" data-i18n="noDemo">sin demo
+                        pública</span>
+                    </div>
+                    <p class="project-description" data-i18n="countryDescription">Plataforma ciudadana para reportar
+                      problemas de la comunidad y darles seguimiento. Busca ofrecer una forma sencilla y transparente de
+                      comunicar situaciones que necesitan atención.</p>
+                    <div class="technologies"><span class="technology">HTML</span><span
+                        class="technology">CSS</span><span class="technology">JavaScript</span></div>
+                    <a class="project-link" href="https://github.com/RobertoAntonioLopez/ayuda-a-tu-pais"
+                      target="_blank" rel="noopener" data-i18n="viewRepository">Ver repositorio</a>
+                  </div>
+                </article>
+
+                <article class="project">
+                  <div class="project-content">
+                    <div class="project-heading">
+                      <h3>Nómina Clara</h3><span class="project-status is-off" data-i18n="noDemo">sin demo
+                        pública</span>
+                    </div>
+                    <p class="project-description" data-i18n="payrollDescription">Sistema básico para administrar
+                      empleados y procesar pagos mensuales. Permite crear, editar, buscar y eliminar empleados,
+                      configurar porcentajes de deducción, calcular salario bruto y neto, y consultar el historial de
+                      nóminas procesadas.</p>
+                    <div class="technologies"><span class="technology">HTML</span><span
+                        class="technology">CSS</span><span class="technology">JavaScript</span><span
+                        class="technology">Local Storage</span></div>
+                    <a class="project-link" href="https://github.com/RobertoAntonioLopez/nomina-clara" target="_blank"
+                      rel="noopener" data-i18n="viewRepository">Ver repositorio</a>
+                  </div>
+                </article>
+
+                <article class="project">
+                  <div class="project-content">
+                    <div class="project-heading">
+                      <h3>Todo App</h3><span class="project-status is-off" data-i18n="noDemo">sin demo pública</span>
+                    </div>
+                    <p class="project-description" data-i18n="todoDescription">Aplicación para organizar tareas y
+                      pendientes diarios. Permite mantener el trabajo ordenado mediante una experiencia sencilla, rápida
+                      y enfocada en lo esencial.</p>
+                    <div class="technologies"><span class="technology">HTML</span><span
+                        class="technology">CSS</span><span class="technology">JavaScript</span></div>
+                    <a class="project-link" href="https://github.com/RobertoAntonioLopez/todo-app" target="_blank"
+                      rel="noopener" data-i18n="viewRepository">Ver repositorio</a>
+                  </div>
+                </article>
+
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="section about" id="sobre-mi">
+          <h2 data-i18n="aboutTitle">Sobre mí</h2>
+
+          <p data-i18n="aboutNote">Busco una oportunidad de pasantía para aprender de un equipo y aportar lo que he practicado en mis proyectos: validación de datos, pruebas y despliegue.</p>
+<ol class="story reveal">
+            <li style="--i:0">
+              <h3 data-es="Desde pequeño" data-en="Since I was a kid">Desde pequeño</h3>
+              <p data-es="Desde pequeño me atrae todo lo relacionado con la tecnología, y esa curiosidad me llevó al desarrollo de software."
+                data-en="Since I was a kid I've been drawn to everything related to technology, and that curiosity led me to software development.">
+                Desde pequeño me atrae todo lo relacionado con la tecnología, y esa curiosidad me llevó al desarrollo de
+                software.</p>
+            </li>
+            <li style="--i:1">
+              <h3 data-es="Hoy" data-en="Today">Hoy</h3>
+              <p data-es="Soy estudiante de término del ITLA, en la recta final de mi carrera, y sigo construyendo proyectos para practicar lo que aprendo."
+                data-en="I'm a final-term student at ITLA, in the home stretch of my degree, and I keep building projects to practice what I learn.">
+                Soy estudiante de término del ITLA, en la recta final de mi carrera, y sigo construyendo proyectos para
+                practicar lo que aprendo.</p>
+            </li>
+            <li style="--i:2">
+              <h3 data-es="Fuera del código" data-en="Away from the code">Fuera del código</h3>
+              <p data-es="Me gustan la música y el fútbol: dos maneras de desconectar y recargar energía."
+                data-en="I enjoy music and football: two ways to unplug and recharge.">Me gustan la música y el fútbol:
+                dos maneras de desconectar y recargar energía.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section" id="habilidades">
+          <h2 data-i18n="skillsTitle">Habilidades</h2>
+          <div class="skill-list">
+            <div>
+              <h3>Frontend</h3>
+              <p>HTML · CSS · Flexbox · JavaScript</p>
+            </div>
+            <div>
+              <h3>Backend</h3>
+              <p>Node.js · Express · API REST</p>
+            </div>
+            <div>
+              <h3 data-i18n="data">Datos</h3>
+              <p>PostgreSQL · Neon · SQL</p>
+            </div>
+            <div>
+              <h3 data-i18n="tools">Herramientas</h3>
+              <p>Git · GitHub · Docker · Postman · Cloudflare Workers</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section contact" id="contacto">
+          <h2 data-i18n="contactHeading">¿Buscas a alguien para tu equipo?</h2>
+          <p data-i18n="contactBody">Estoy abierto a oportunidades de pasantía y colaboraciones en desarrollo de
+            software.</p><a class="email" href="mailto:robertoalg.dev@gmail.com">robertoalg.dev@gmail.com</a><a
+            class="github-link" href="https://github.com/RobertoAntonioLopez" target="_blank"
+            rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path
+                d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.64 1.22 3.28.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.28-5.14 5.56.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z" />
+            </svg><span>GitHub</span></a>
+        </section>
+
+      </main>
+      <footer><span>Roberto Antonio López García</span><a href="#inicio" data-i18n="backTop">Volver al inicio</a>
+      </footer>
+    </div>
   </div>
-</article>
 
-<article class="project"><div class="project-content"><div class="project-heading"><h3>Postula</h3><span class="project-status" data-i18n="demoAvailable">demo disponible</span></div><p class="project-description" data-i18n="postulaDescription">Gestor de postulaciones laborales con seguimiento por etapas, filtros y próxima entrevista. API con Express, datos en PostgreSQL con Neon e interfaz con Flexbox. Desplegado en Cloudflare Workers.</p><div class="technologies"><span class="technology js">JavaScript</span><span class="technology node">Node.js</span><span class="technology express">Express</span><span class="technology postgres">PostgreSQL</span><span class="technology node">Neon</span><span class="technology css">CSS Flexbox</span><span class="technology html">Cloudflare Workers</span></div><div class="project-links"><a class="project-link" href="https://postula.roberto-antonio-lopez.workers.dev" target="_blank" rel="noopener noreferrer" data-i18n="viewDemo">Ver demo</a><a class="project-link" href="https://github.com/RobertoAntonioLopez/postula" target="_blank" rel="noopener noreferrer" data-i18n="viewRepository">Ver repositorio</a></div></div></article>
-<article class="project">
-      <div class="project-content">
-        <div class="project-heading">
-          <h3>Tackle</h3>
-          <span class="project-status" data-i18n="demoAvailable">demo disponible</span>
-        </div>
-        <p class="project-description" data-i18n="tackleDescription">
-          Plataforma de gestión de tickets de soporte técnico. Permite crear, consultar,
-          editar y eliminar incidencias, buscarlas y filtrarlas por estado o prioridad.
-          Incluye validación del lado del servidor, estadísticas de carga de trabajo y
-          pruebas de integración para la API.
-        </p>
-        <div class="technologies">
-          <span class="technology html">HTML</span><span class="technology css">CSS</span><span class="technology js">JavaScript</span>
-          <span class="technology node">Node.js</span><span class="technology express">Express</span><span class="technology postgres">PostgreSQL</span>
-          <span class="technology postgres">SQL</span>
-        </div>
-        <div class="project-links">
-          <a class="project-link" href="https://tackle-demo.onrender.com/#overview" target="_blank" rel="noopener" data-i18n="viewDemo">Ver demo</a>
-          <a class="project-link" href="https://github.com/RobertoAntonioLopez/tackle" target="_blank" rel="noopener" data-i18n="viewRepository">Ver repositorio</a>
-        </div>
-      </div>
-    </article>
-<details class="more-projects"><summary data-i18n="moreProjects">Más proyectos y ejercicios</summary><div class="additional-projects"><article class="project">
-      <div class="project-content">
-        <div class="project-heading">
-          <h3>Ayuda a tu País</h3>
-          <span class="project-status" data-i18n="noDemo">sin demo pública</span>
-        </div>
-        <p class="project-description" data-i18n="countryDescription">
-          Plataforma ciudadana para reportar problemas de la comunidad y darles
-          seguimiento. Busca ofrecer una forma sencilla y transparente de comunicar
-          situaciones que necesitan atención.
-        </p>
-        <div class="technologies">
-          <span class="technology html">HTML</span><span class="technology css">CSS</span><span class="technology js">JavaScript</span>
-        </div>
-        <a class="project-link" href="https://github.com/RobertoAntonioLopez/ayuda-a-tu-pais" target="_blank" rel="noopener" data-i18n="viewRepository">Ver repositorio</a>
-      </div>
-    </article>
-<article class="project">
-      <div class="project-content">
-        <div class="project-heading">
-          <h3>Nómina Clara</h3>
-          <span class="project-status" data-i18n="noDemo">sin demo pública</span>
-        </div>
-        <p class="project-description" data-i18n="payrollDescription">
-          Sistema básico para administrar empleados y procesar pagos mensuales.
-          Permite crear, editar, buscar y eliminar empleados, configurar porcentajes
-          de deducción, calcular salario bruto y neto, y consultar el historial de
-          nóminas procesadas.
-        </p>
-        <div class="technologies">
-          <span class="technology html">HTML</span><span class="technology css">CSS</span><span class="technology js">JavaScript</span>
-          <span class="technology storage">Local Storage</span>
-        </div>
-        <a class="project-link" href="https://github.com/RobertoAntonioLopez/nomina-clara" target="_blank" rel="noopener" data-i18n="viewRepository">Ver repositorio</a>
-      </div>
-    </article>
-<article class="project">
-      <div class="project-content">
-        <div class="project-heading">
-          <h3>Todo App</h3>
-          <span class="project-status" data-i18n="noDemo">sin demo pública</span>
-        </div>
-        <p class="project-description" data-i18n="todoDescription">
-          Aplicación para organizar tareas y pendientes diarios. Permite mantener el
-          trabajo ordenado mediante una experiencia sencilla, rápida y enfocada en lo
-          esencial.
-        </p>
-        <div class="technologies">
-          <span class="technology html">HTML</span><span class="technology css">CSS</span><span class="technology js">JavaScript</span>
-        </div>
-        <a class="project-link" href="https://github.com/RobertoAntonioLopez/todo-app" target="_blank" rel="noopener" data-i18n="viewRepository">Ver repositorio</a>
-      </div>
-    </article>
-</div></details></div></section>
-<section class="section about" id="sobre-mi"><h2 data-i18n="aboutTitle">Sobre mí</h2><div><p data-i18n="aboutBody">Soy desarrollador de software y me interesan especialmente el backend y las bases de datos. Trabajo con JavaScript, Express y SQL para crear aplicaciones completas, desde la API hasta la interfaz.</p><p data-i18n="aboutNote">Busco una oportunidad de pasantía para aprender de un equipo y aportar lo que he practicado en mis proyectos: validación de datos, pruebas y despliegue.</p></div></section>
-<section class="section" id="habilidades"><h2 data-i18n="skillsTitle">Habilidades</h2><div class="skill-list"><div><h3>Frontend</h3><p>HTML · CSS · Flexbox · JavaScript</p></div><div><h3>Backend</h3><p>Node.js · Express · API REST</p></div><div><h3 data-i18n="data">Datos</h3><p>PostgreSQL · Neon · SQL</p></div><div><h3 data-i18n="tools">Herramientas</h3><p>Git · GitHub · Cloudflare Workers</p></div></div></section>
-<section class="section contact" id="contacto"><p class="eyebrow" data-i18n="nextStep">Sigamos la conversación</p><h2 data-i18n="contactHeading">¿Buscas a alguien para tu equipo?</h2><p data-i18n="contactBody">Estoy abierto a oportunidades de pasantía y colaboraciones en desarrollo de software.</p><a class="email" href="mailto:robertoalg.dev@gmail.com">robertoalg.dev@gmail.com</a><a class="github-link" href="https://github.com/RobertoAntonioLopez" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.64 1.22 3.28.93.1-.73.39-1.22.71-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.46 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.28-5.14 5.56.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub</span></a></section>
-</main>
-<footer class="wrap"><span>Roberto Antonio López García</span><a href="#inicio" data-i18n="backTop">Volver al inicio</a></footer>
+  
+
+  
 </body>
+
 </html>
