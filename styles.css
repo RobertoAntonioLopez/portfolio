@@ -1287,7 +1287,7 @@ h1::after { display:none; }
 /* Seasonal preview: decorative only, no flashing or interaction changes. */
 .brand { position:relative; isolation:isolate; }
 .holiday-hat { position:absolute; width:54px; height:45px; max-width:none; top:-25px; left:-10px; transform:rotate(-15deg); pointer-events:none; }
-.holiday-lights { position:fixed; top:0; left:0; right:0; height:40px; z-index:35; pointer-events:none; overflow:hidden; }
+.holiday-lights { position:absolute; top:0; left:0; right:0; height:40px; z-index:35; pointer-events:none; overflow:hidden; }
 .holiday-wire { position:absolute; top:0; left:0; }
 .holiday-bulbs { display:flex; justify-content:space-around; min-width:1440px; height:36px; }
 .holiday-bulbs i { position:relative; display:block; flex:none; margin-top:20px; width:7px; height:11px; border-radius:45% 45% 50% 50%; background:#ffda88; color:#ffd47c; box-shadow:0 0 7px 2px #ffd47c66,0 0 18px 5px #ffd47c22; }
