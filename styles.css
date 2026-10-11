@@ -1283,3 +1283,21 @@ h1::after { display:none; }
 }
 @media print { .shell.is-collapsed { display:block; } .js .story li { opacity:1; } }
 [hidden] { display:none !important; }
+
+/* Seasonal preview: decorative only, no flashing or interaction changes. */
+.brand { position:relative; isolation:isolate; }
+.holiday-hat { position:absolute; width:54px; height:45px; max-width:none; top:-25px; left:-10px; transform:rotate(-15deg); pointer-events:none; }
+.holiday-lights { position:fixed; top:0; left:0; right:0; height:40px; z-index:35; pointer-events:none; overflow:hidden; }
+.holiday-wire { position:absolute; top:0; left:0; }
+.holiday-bulbs { display:flex; justify-content:space-around; min-width:1440px; height:36px; }
+.holiday-bulbs i { position:relative; display:block; flex:none; margin-top:20px; width:7px; height:11px; border-radius:45% 45% 50% 50%; background:#ffda88; color:#ffd47c; box-shadow:0 0 7px 2px #ffd47c66,0 0 18px 5px #ffd47c22; }
+.holiday-bulbs i:nth-child(2n) { background:#ec8d7f; color:#ec8d7f; box-shadow:0 0 7px 2px #ec8d7f55,0 0 18px 5px #ec8d7f18; }
+.holiday-bulbs i:nth-child(3n) { background:#c4dbb0; color:#c4dbb0; box-shadow:0 0 7px 2px #c4dbb055,0 0 18px 5px #c4dbb018; }
+.holiday-bulbs i::before { content:""; position:absolute; top:-4px; left:1px; width:5px; height:5px; background:#53654b; border-radius:1px; }
+.rail { padding-top:55px; }
+@media(max-width:900px) {
+ .rail,.is-collapsed .rail { padding-top:38px; }
+ .holiday-hat { width:39px; height:33px; top:-19px; left:-7px; }
+ html { scroll-padding-top:112px; }
+}
+@media print { .holiday-lights,.holiday-hat { display:none; } }
