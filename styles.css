@@ -1301,3 +1301,8 @@ h1::after { display:none; }
  html { scroll-padding-top:112px; }
 }
 @media print { .holiday-lights,.holiday-hat { display:none; } }
+
+/* Small seasonal vignette below the Dominican Republic map. */
+.holiday-tree { display:block; width:112px; height:auto; margin:4px auto -12px; color:var(--text); flex:none; }
+@media(max-width:700px) { .holiday-tree { width:94px; margin-top:0; } }
+@media print { .holiday-tree { display:none; } }
